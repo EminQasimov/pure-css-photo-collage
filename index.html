@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pure Css Photo Collage</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+        background: gold;
+      }
+
+      .container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 100%;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-transform: scale(0.92);
+        -ms-transform: scale(0.92);
+        transform: scale(0.92);
+      }
+
+      .two.two {
+        -webkit-transform: scaleX(-1);
+        -ms-transform: scaleX(-1);
+        transform: scaleX(-1);
+        border-right: 14px solid gold;
+        background: url(aktor-min.png) -205px -4px / cover no-repeat;
+      }
+      .two.two .bottom {
+        background: url(nausnik-min.jpg) 222px -111px/66% no-repeat;
+      }
+      .two.two .bottom::after {
+        background: url(qiz-min.jpg) center/156% no-repeat;
+      }
+      .two.two .middle {
+        background: url(qiz2-min.jpg) -81px -20px / cover no-repeat;
+      }
+      .two.two .top {
+        background: url(leonardo-min.jpg) right -70px /57% no-repeat;
+      }
+      .two.two .top::after {
+        background: url(uz-min.jpg) center/100% no-repeat;
+      }
+
+      .wrap {
+        width: 600px;
+        height: 650px;
+        position: relative;
+        overflow: hidden;
+        background: url(qus.jpg) -300px -100px / cover no-repeat;
+      }
+
+      .top {
+        width: 660px;
+        height: 270px;
+        position: absolute;
+        z-index: 2;
+        -webkit-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+        top: -90px;
+        left: -66px;
+        border: 14px solid gold;
+        overflow: hidden;
+        background: url(acki.jpg) 250px -20px/80% no-repeat;
+      }
+      .top::after {
+        content: " ";
+        display: block;
+        width: 300px;
+        height: 300px;
+        border: 14px solid gold;
+        -webkit-transform: rotate(-5deg);
+        -ms-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+        background: url(salah-min.jpg) -50px 0px / cover no-repeat;
+      }
+
+      .middle {
+        width: 320px;
+        height: 400px;
+        position: absolute;
+        right: -110px;
+        top: 132px;
+        z-index: 1;
+        -webkit-transform: rotate(8deg);
+        -ms-transform: rotate(8deg);
+        transform: rotate(8deg);
+        border: 14px solid gold;
+        background: url(monro-min.jpg) -50px top/cover no-repeat;
+      }
+
+      .bottom {
+        z-index: 2;
+        width: 700px;
+        height: 270px;
+        position: absolute;
+        -webkit-transform: rotate(5deg);
+        -ms-transform: rotate(5deg);
+        transform: rotate(5deg);
+        bottom: -90px;
+        right: -80px;
+        border: 14px solid gold;
+        overflow: hidden;
+        background: url(aslan-min.jpg) 190px -68px/67% no-repeat;
+      }
+      .bottom::after {
+        content: " ";
+        display: block;
+        width: 300px;
+        height: 300px;
+        border: 14px solid gold;
+        -webkit-transform: translate(-70px, -65px) rotate(17deg);
+        -ms-transform: translate(-70px, -65px) rotate(17deg);
+        transform: translate(-70px, -65px) rotate(17deg);
+        background: url(juana-min.jpg) 100px -10px / cover no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrap">
+        <div class="top"></div>
+        <div class="middle"></div>
+        <div class="bottom"></div>
+      </div>
+      <div class="wrap two">
+        <div class="top"></div>
+        <div class="middle"></div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+  </body>
+</html>
